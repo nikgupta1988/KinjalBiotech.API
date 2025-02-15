@@ -18,5 +18,7 @@ namespace KinjalBiotech.Model
         public int Role { get; set; }
         public string PhoneNumber { get; set; }
         public string Address { get; set; }
+        // Navigation Property (One User has Many Sales)
+
     }
 }

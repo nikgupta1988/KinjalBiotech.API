@@ -9,7 +9,14 @@ namespace KinjalBiotech.Model
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int SellID { get; set; }
 
-        public int ProductID { get; set; }        
+        //[ForeignKey("ProductDetail")]
+        //public int ProductID { get; set; }
+
+        [ForeignKey("CategoryDetail")]
+        public int CategoryID { get; set; }
+
+        [ForeignKey("UserDetail")]
+        public int UserID { get; set; }
         public int Quantity { get; set; }
         public DateTime SellDate { get; set; }
         public int CustID { get; set; }
@@ -18,6 +25,8 @@ namespace KinjalBiotech.Model
         // Navigation property
       
         
-        public ProductDetail Products { get; set; }
+        //public ProductDetail ProductDetail { get; set; }
+        public CategoryDetail CategoryDetail { get; set; }
+        public UserDetail UserDetail { get; set; }
     }
 }

@@ -9,6 +9,7 @@ namespace KinjalBiotech.Model
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] 
         public int ProductID { get; set; }
 
+        [ForeignKey("CategoryDetail")]
         public int CategoryID { get; set; }
 
         [Required]
@@ -21,8 +22,8 @@ namespace KinjalBiotech.Model
         public decimal Discount { get; set; }
         public int CreatedBy { get; set; }
         public DateTime CreatedDate { get; set; }
-
-        // Navigation property        
-        public CategoryDetail Category { get; set; }
+        // Navigation Property (Many Products belong to One Category)
+        //Nabigation props 
+        public CategoryDetail CategoryDetail { get; set; }
     }
 }

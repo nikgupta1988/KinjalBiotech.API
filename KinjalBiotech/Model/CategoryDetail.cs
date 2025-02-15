@@ -9,6 +9,8 @@ namespace KinjalBiotech.Model
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CategoryID { get; set; }
         public string CategoryName { get; set; }
+
        
+
     }
 }
