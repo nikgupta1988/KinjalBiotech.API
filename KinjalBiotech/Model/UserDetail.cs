@@ -1,9 +1,17 @@
-﻿namespace KinjalBiotech.Model
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+
+namespace KinjalBiotech.Model
 {
     public class UserDetail
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int UserID { get; set; }
+
+        [Required]
         public string userEMail { get; set; }
+        [Required]
         public string UserPassword { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

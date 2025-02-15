@@ -7,7 +7,8 @@ namespace KinjalBiotech.Model
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int CategoruID { get; set; }
+        public int CategoryID { get; set; }
         public string CategoryName { get; set; }
+       
     }
 }
